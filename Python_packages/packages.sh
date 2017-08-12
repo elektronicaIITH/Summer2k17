@@ -1,9 +1,4 @@
 #!/bin/sh
-# This is a powerful script which in the wrong hands can hack into any system
-# on this world. If you are using this, you hold the fate of this world in your
-# hands.
-# HANDLE with CARE!
-# LOL
 if [ `id -u` -ne 0 ]
 	then echo "Run the command as root."
 	exit
