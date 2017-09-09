@@ -13,12 +13,12 @@ void setup()
 
 void loop()
 {
- while(mySerial.available())
+ while(mySerial.available())  //runs when data is received
   {
     myChar = (byte) mySerial.read();
     Serial.print(myChar);
   
-    if(myChar == '1')
+    if(myChar == '1')  
     {
        off1();
     }
@@ -49,7 +49,7 @@ void pattern()
   Serial.println("started");
   while(1)
   { 
-      if(mySerial.available())
+      if(mySerial.available()) //for stopping while loop
       { 
         myChar = (byte) mySerial.read();
         if(myChar == '5')
@@ -57,7 +57,6 @@ void pattern()
       }
     
       myChar = (byte) mySerial.read();
-//      Serial.print(myChar);
       on1();
       delay(1000);
       off1();
